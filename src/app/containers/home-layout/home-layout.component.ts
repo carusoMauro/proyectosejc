@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLayoutComponent implements OnInit {
 
+
+vacas: string;
   constructor() { }
 
   ngOnInit() {
+  	this.vacas = 'ya sabes';
   }
 
 }
