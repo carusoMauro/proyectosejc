@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './services-layout.component.html',
   styleUrls: ['./services-layout.component.css']
 })
-export class servicesLayoutComponent implements OnInit {
+export class ServicesLayoutComponent implements OnInit {
 
 
 vacas: string;
