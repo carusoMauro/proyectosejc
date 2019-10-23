@@ -4,11 +4,15 @@ import { HomeLayoutComponent } from './containers/home-layout/home-layout.compon
 import { ContactLayoutComponent } from './containers/contact-layout/contact-layout.component';
 import { PortfolioLayoutComponent } from './containers/portfolio-layout/portfolio-layout.component';
 import { ServicesLayoutComponent } from './containers/services-layout/services-layout.component';
+import { BlogLayoutComponent } from './containers/blog-layout/blog-layout.component';
+
 const routes: Routes = [
 	{path: 'home', component: HomeLayoutComponent},
-	{path: 'contact', component: ContactLayoutComponent},
-	{path: 'portfolio', component: PortfolioLayoutComponent},
-	{path: 'services', component: ServicesLayoutComponent},
+	{path: '', component: HomeLayoutComponent},
+	{path: 'contacto', component: ContactLayoutComponent},
+	{path: 'obras', component: BlogLayoutComponent},
+	{path: 'servicios', component: ServicesLayoutComponent},
+	{path: 'faqs', component: PortfolioLayoutComponent}
 ];
 
 @NgModule({

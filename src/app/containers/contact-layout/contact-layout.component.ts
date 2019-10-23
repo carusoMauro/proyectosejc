@@ -12,7 +12,6 @@ vacas: string;
   constructor() { }
 
   ngOnInit() {
-  	this.vacas = 'ya sabes';
   }
 
 }

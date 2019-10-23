@@ -7,6 +7,7 @@ import { HomeLayoutComponent } from './containers/home-layout/home-layout.compon
 import { ContactLayoutComponent } from './containers/contact-layout/contact-layout.component';
 import { PortfolioLayoutComponent } from './containers/portfolio-layout/portfolio-layout.component';
 import { ServicesLayoutComponent } from './containers/services-layout/services-layout.component';
+import { BlogLayoutComponent } from './containers/blog-layout/blog-layout.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ServicesLayoutComponent } from './containers/services-layout/services-l
     HomeLayoutComponent,
     ContactLayoutComponent,
     PortfolioLayoutComponent,
-    ServicesLayoutComponent
+    ServicesLayoutComponent,
+    BlogLayoutComponent
   ],
   imports: [
     BrowserModule,
