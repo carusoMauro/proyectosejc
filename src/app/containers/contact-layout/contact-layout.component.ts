@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from "@angular/core";
+import { WOW } from 'wowjs/dist/wow.min';
 
 @Component({
   selector: 'app-contact-layout',
   templateUrl: './contact-layout.component.html',
   styleUrls: ['./contact-layout.component.css']
 })
-export class ContactLayoutComponent implements OnInit {
+export class ContactLayoutComponent implements OnInit, AfterViewInit{
 
-
-vacas: string;
-  constructor() { }
+  ngAfterViewInit(): void {
+    new WOW().init();
+  }
 
   ngOnInit() {
   }

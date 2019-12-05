@@ -8,7 +8,7 @@ import { BlogLayoutComponent } from './containers/blog-layout/blog-layout.compon
 
 const routes: Routes = [
 	{path: 'home', component: HomeLayoutComponent},
-	{path: '', component: HomeLayoutComponent},
+	{path: '', redirectTo:'home', pathMatch: 'full' },
 	{path: 'contacto', component: ContactLayoutComponent},
 	{path: 'faqs', component: BlogLayoutComponent},
 	{path: 'servicios', component: ServicesLayoutComponent},

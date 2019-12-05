@@ -1,18 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from "@angular/core";
+import { WOW } from 'wowjs/dist/wow.min';
+declare var jquery:any;
+declare var $ :any;
+
 
 @Component({
   selector: 'app-home-layout',
   templateUrl: './home-layout.component.html',
   styleUrls: ['./home-layout.component.css']
 })
-export class HomeLayoutComponent implements OnInit {
+export class HomeLayoutComponent implements AfterViewInit {
 
+  ngAfterViewInit(): void {
+    new WOW().init();
 
-vacas: string;
-  constructor() { }
+    this.initializeBxslider();
 
-  ngOnInit() {
-  	this.vacas = 'ya sabes';
   }
 
+
+  private initializeBxslider() {
+    $(".bxslider").bxSlider({
+      auto: true
+    });
+  }
 }

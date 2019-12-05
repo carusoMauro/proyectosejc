@@ -3,125 +3,33 @@
 	<div class="col-lg-12">
 		<div class="text-center">
 			<div class="wow bounceInDown" data-wow-offset="0" data-wow-delay="0.3s">
-				<h2>Portfolio</h2>					
+				<h2>Obras</h2>
 			</div>
 			<div class="wow bounceInDown" data-wow-offset="0" data-wow-delay="0.6s">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<p>Se puede agregar una descripción de cada obra</p>
 			</div>
 		</div>
 	
 
 		<ul class="portfolio-filter text-center">
-			<li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
-			<li><a class="btn btn-default" href="#" data-filter=".bootstrap">Creative</a></li>
-			<li><a class="btn btn-default" href="#" data-filter=".html">Photography</a></li>
-			<li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 1}" class="btn btn-default" (click)="changeImages(1)" data-filter="*">Casa 1</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 2}" class="btn btn-default" (click)="changeImages(2)" data-filter="*">Casa 2</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 3}" class="btn btn-default" (click)="changeImages(3)" data-filter="*">Casa 3</a></li>
 		</ul><!--/#portfolio-filter-->
 
 		<div class="row">
 			<div class="portfolio-items">
-				<div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+				<div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3" *ngFor="let imagePath of images">
 					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item1.png" alt="">
+						<img class="img-responsive" [src]="'assets/images/portfolio/casa'+homeNumber+'/'+imagePath+'.JPG'"  title="Titulo de img" alt="Alt de imagenS">
 						<div class="overlay">
 							<div class="recent-work-inner">
 								<h3><a href="#">Business theme</a></h3>
 								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+								<a title="Titulo de la imagen" class="preview" href="{{'assets/images/portfolio/casa'+homeNumber+'/'+imagePath+'.JPG'}}" rel="prettyPhoto[imagePath]"><i class="fa fa-eye"></i> View</a>
 							</div> 
 						</div>
 					</div>
-				</div><!--/.portfolio-item-->
-
-				<div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item2.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>          
-				</div><!--/.portfolio-item-->
-
-				<div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item3.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>        
-				</div><!--/.portfolio-item-->
-
-				<div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item4.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>           
-				</div><!--/.portfolio-item-->
-	  
-				<div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item5.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>      
-				</div><!--/.portfolio-item-->
-
-				<div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item6.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>         
-				</div><!--/.portfolio-item-->
-
-				<div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item7.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>          
-				</div><!--/.portfolio-item-->
-
-				<div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
-					<div class="recent-work-wrap">
-						<img class="img-responsive" src="assets/images/portfolio/recent/item8.png" alt="">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a class="preview" href="assets/images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-							</div> 
-						</div>
-					</div>          
 				</div><!--/.portfolio-item-->
 			</div>
 		</div>
