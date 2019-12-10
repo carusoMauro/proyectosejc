@@ -15,15 +15,15 @@ export class AppComponent implements AfterViewInit{
 
   loadScripts() {
     const dynamicScripts = [
-      'assets/js/jquery-2.1.1.min.js',
-      'assets/js/bootstrap.min.js',
-      'assets/js/wow.min.js',
-      'assets/js/fancybox/jquery.fancybox.pack.js',
-      'assets/js/jquery.easing.1.3.js',
-      'assets/js/jquery.bxslider.min.js',
-      'assets/js/jquery.prettyPhoto.js',
-      'assets/js/jquery.isotope.min.js',
-      'assets/js/functions.js'
+      './assets/js/jquery-2.1.1.min.js',
+      './assets/js/bootstrap.min.js',
+      './assets/js/wow.min.js',
+      './assets/js/fancybox/jquery.fancybox.pack.js',
+      './assets/js/jquery.easing.1.3.js',
+      './assets/js/jquery.bxslider.min.js',
+      './assets/js/jquery.prettyPhoto.js',
+      './assets/js/jquery.isotope.min.js',
+      './assets/js/functions.js'
     ];
     for (let i = 0; i < dynamicScripts.length; i++) {
       const node = document.createElement('script');
