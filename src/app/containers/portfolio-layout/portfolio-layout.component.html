@@ -6,28 +6,28 @@
 				<h2>Obras</h2>
 			</div>
 			<div class="wow bounceInDown" data-wow-offset="0" data-wow-delay="0.6s">
-				<p>Se puede agregar una descripción de cada obra</p>
+				<p style="font-size: initial;">{{tabDescription[homeNumber-1]}}</p>
 			</div>
 		</div>
 	
 
 		<ul class="portfolio-filter text-center">
-			<li><a [ngClass]="{'active': homeNumber === 1}" class="btn btn-default" (click)="changeImages(1)" data-filter="*">Casa 1</a></li>
-			<li><a [ngClass]="{'active': homeNumber === 2}" class="btn btn-default" (click)="changeImages(2)" data-filter="*">Casa 2</a></li>
-			<li><a [ngClass]="{'active': homeNumber === 3}" class="btn btn-default" (click)="changeImages(3)" data-filter="*">Casa 3</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 1}" class="btn btn-default" (click)="changeImages(1)" data-filter="*">Barbacoa</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 2}" class="btn btn-default" (click)="changeImages(2)" data-filter="*">Vivienda</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 3}" class="btn btn-default" (click)="changeImages(3)" data-filter="*">Baño social</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 4}" class="btn btn-default" (click)="changeImages(4)" data-filter="*">Atelier</a></li>
 		</ul><!--/#portfolio-filter-->
 
 		<div class="row">
 			<div class="portfolio-items">
-				<div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3" *ngFor="let imagePath of images">
+				<div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3" *ngFor="let imagePath of arr(numberOfImages[homeNumber]).fill(1); index as i ">
 					<div class="recent-work-wrap">
-						<img class="img-responsive" [src]="'assets/images/portfolio/casa'+homeNumber+'/'+imagePath+'.JPG'"  title="Titulo de img" alt="Alt de imagenS">
-						<div class="overlay">
-							<div class="recent-work-inner">
-								<h3><a href="#">Business theme</a></h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-								<a title="Titulo de la imagen" class="preview" href="{{'assets/images/portfolio/casa'+homeNumber+'/'+imagePath+'.JPG'}}" rel="prettyPhoto[imagePath]"><i class="fa fa-eye"></i> View</a>
-							</div> 
+            <img class="img-responsive" [src]="'assets/images/portfolio/casa'+homeNumber+'/'+(i+1)+'.JPG'"  title="Titulo de img" alt="Alt de imagenS">
+            <div class="overlay" style="bottom:0; top: ; height: 110px;">
+							<div class="recent-work-inner" style="position: relative;">
+								<p>Nombre de la imágen</p>
+								<a title="Título de la imagen" class="preview" href="{{'assets/images/portfolio/casa'+homeNumber+'/'+(i+1)+'.JPG'}}" rel="prettyPhoto[imagePath]"><i class="fa fa-eye"></i> Ver</a>
+							</div>
 						</div>
 					</div>
 				</div><!--/.portfolio-item-->
