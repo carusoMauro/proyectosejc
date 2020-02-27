@@ -12,6 +12,10 @@ export class AppComponent implements AfterViewInit{
     new WOW().init();
   }
 
+  goToTop() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+
 
   loadScripts() {
     const dynamicScripts = [

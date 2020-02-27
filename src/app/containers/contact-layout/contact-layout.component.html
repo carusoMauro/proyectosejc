@@ -32,33 +32,34 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="contact-form">
+	<form [formGroup]="formGroup">
+	  <div class="contact-form">
 		<div class="container">
 			<div class="col-md-4">
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputName" placeholder="Nombre">
+					<input [formControlName]="'name'" type="email" class="form-control" id="exampleInputName" placeholder="Nombre *">
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					<input [formControlName]="'email'" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email *">
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputPhone" placeholder="Teléfono">
+					<input [formControlName]="'phone'" type="email" class="form-control" id="exampleInputPhone" placeholder="Teléfono">
 				</div>
 			</div>
 		</div>
 		
 		<div class="container">
 			<div class="col-lg-12">				
-				<textarea class="form-control" rows="5"></textarea>			
+				<textarea [formControlName]="'message'" class="form-control" rows="5"></textarea>
 				<div class="form-group">
-					<button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Enviar mensaje</button>
+					<button type="submit" (click)="submit()" name="submit" class="btn btn-primary btn-lg" required="required">Enviar mensaje</button>
 				</div>
 			</div>
 		</div>
 		
 	</div>
+  </form>

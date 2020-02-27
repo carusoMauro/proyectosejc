@@ -8,6 +8,8 @@ import { ContactLayoutComponent } from './containers/contact-layout/contact-layo
 import { PortfolioLayoutComponent } from './containers/portfolio-layout/portfolio-layout.component';
 import { ServicesLayoutComponent } from './containers/services-layout/services-layout.component';
 import { BlogLayoutComponent } from './containers/blog-layout/blog-layout.component';
+import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { BlogLayoutComponent } from './containers/blog-layout/blog-layout.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
