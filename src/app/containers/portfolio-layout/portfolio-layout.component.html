@@ -12,13 +12,16 @@
 	
 
 		<ul class="portfolio-filter text-center">
-			<li><a [ngClass]="{'active': homeNumber === 1}" class="btn btn-default" (click)="changeImages(1)" data-filter="*">Barbacoa</a></li>
-			<li><a [ngClass]="{'active': homeNumber === 2}" class="btn btn-default" (click)="changeImages(2)" data-filter="*">Vivienda</a></li>
-			<li><a [ngClass]="{'active': homeNumber === 3}" class="btn btn-default" (click)="changeImages(3)" data-filter="*">Baño social</a></li>
-			<li><a [ngClass]="{'active': homeNumber === 4}" class="btn btn-default" (click)="changeImages(4)" data-filter="*">Atelier</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 1}" class="btn btn-default" (click)="changeImages(1)" data-filter="*">Show Room</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 2}" class="btn btn-default" (click)="changeImages(2)" data-filter="*">Baño</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 3}" class="btn btn-default" (click)="changeImages(3)" data-filter="*">Hall</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 4}" class="btn btn-default" (click)="changeImages(4)" data-filter="*">Barbacoa</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 5}" class="btn btn-default" (click)="changeImages(5)" data-filter="*">Vivienda</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 6}" class="btn btn-default" (click)="changeImages(6)" data-filter="*">Baño social</a></li>
+			<li><a [ngClass]="{'active': homeNumber === 7}" class="btn btn-default" (click)="changeImages(7)" data-filter="*">Atelier</a></li>
 		</ul><!--/#portfolio-filter-->
 
-		<div class="row">
+		<div class="row" *ngIf="change">
 			<div class="portfolio-items">
 				<div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3" *ngFor="let imagePath of arr(numberOfImages[homeNumber]).fill(1); index as i ">
 					<div class="recent-work-wrap">

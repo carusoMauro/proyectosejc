@@ -20,13 +20,17 @@ export class PortfolioLayoutComponent implements OnInit, AfterViewInit{
   numberOfImages: Object;
   tabDescription: Array<string> = [];
   arr=Array;
+  change = true;
   constructor(private ref: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.homeNumber = 1;
     this.images = ["1", "2", "3", "4", "5", "6", "7", "8"];
-    this.numberOfImages = {1: 7, 2: 8, 3: 2, 4:2};
+    this.numberOfImages = {1: 8, 2: 8,3: 4, 4: 7, 5: 8, 6: 2, 7:2};
     this.tabDescription = [
+      'ShowRoom 18 m2',
+      'Baño 2 m2',
+      'Hall de entrada 2,5 m2',
       'Barbacoa 32 m2 con baño - Maldonado (Tiempo estimado 25 días)',
       'Vivienda 44 m2 Ciudad de la Costa (Tiempo estimado 30 días)',
       'Baño social 1.15 x 1.72 ( armado en 2 días) - Canelones',
@@ -54,8 +58,14 @@ export class PortfolioLayoutComponent implements OnInit, AfterViewInit{
   }
 
   changeImages(houseIndex: number) {
-    console.log(houseIndex);
+    this.change = false;
+    console.log(houseIndex, this.numberOfImages[houseIndex]);
     this.homeNumber = houseIndex;
-    this.ref.detectChanges();
+    setTimeout(()=>{
+      this.change = true;
+
+      this.ref.detectChanges();
+    }, 200);
+
   }
 }
